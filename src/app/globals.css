@@ -185,6 +185,8 @@ p {
 
 /* Blinking Cursor Animation */
 .cursor {
+  font-weight: bold;
+  color: var(--text-color);
   animation: blink 1s step-end infinite;
 }
 
