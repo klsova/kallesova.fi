@@ -5,18 +5,6 @@ import { FaGithub, FaTwitter, FaLinkedin, FaCode } from "react-icons/fa";
 export default function Home() {
   return (
     <main>
-      <nav>
-        <div className="prompt">
-          {/* Matches Ubuntu: Green user, White colon, Blue path, White dollar sign */}
-          <span className="prompt-user">kallesova@mysite</span>
-          <span className="prompt-symbol">:</span>
-          <span className="prompt-path">~</span>
-          <span className="prompt-symbol">$</span> <span className="cursor">_</span>
-        </div>
-        <div>Works</div>
-        <div>☀</div>
-      </nav>
-
       <div className="container">
         {/* Header / Hero */}
         <header>
@@ -64,6 +52,16 @@ export default function Home() {
             <div className="year">2022</div>
             <div className="event">
               Started my bachelor's degree in <Link href="https://www.utu.fi/en/study-at-utu/bachelors-degree-programme-in-information-and-communication-technology">Information and Communication Technologies</Link>
+            </div>
+
+            <div className="year">2025</div>
+            <div className="event">
+              My year as the Chairperson of <Link href="https://digit.fi/">Digit ry</Link>
+            </div>
+
+            <div className="year">2025</div>
+            <div className="event">
+              Research Assistant at <Link href="https://www.oppimisanalytiikka.fi/">TRILA</Link>
             </div>
 
             <div className="year">2025</div>

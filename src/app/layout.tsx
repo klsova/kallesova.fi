@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Ubuntu } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
+import Navbar from "../components/Navbar";
 
 // Configure the Linux-style font
-const jetbrainsMono = JetBrains_Mono({ 
+const ubuntuFont = Ubuntu({ 
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-jetbrains", 
+  weight: ["400", "700"], 
 });
 
 export const metadata: Metadata = {
   title: "kallesova@mysite: ~/$",
-  description: "Software Engineer Portfolio",
+  description: "Portfolio",
 };
 
 export default function RootLayout({
@@ -20,8 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={jetbrainsMono.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={ubuntuFont.className}>
+        <Providers>
+          <Navbar /> 
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
