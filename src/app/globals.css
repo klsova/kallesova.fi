@@ -1,42 +1,183 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Official Ubuntu Terminal Colors */
+  --bg-color: #300a24;     /* Deep Aubergine Purple */
+  --text-color: #eeeeee;   /* Off-white for readability */
+  --accent-color: #8ae234; /* The specific Ubuntu neon green */
+  --path-color: #3465a4;   /* The blue color for the directory path '~' */
+  --dim-color: #d3d7cf;    /* Light gray for descriptions */
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* Links & Buttons get the Green Accent */
 a {
-  color: inherit;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+a:hover {
+  text-decoration: underline;
+  color: #fff; /* Hover turns white */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  font-size: 0.9rem;
+}
+
+
+.prompt-user {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.prompt-path {
+  color: var(--path-color); /* Blue: ~ */
+  font-weight: bold;
+}
+.prompt-symbol {
+  color: var(--text-color); /* White: : and $ */
+}
+
+/* Layout */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--dim-color);
+  margin-top: 0.5rem;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  border: 2px solid var(--accent-color); /* Green border around photo */
+  object-fit: cover;
+}
+
+/* Sections */
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+h2::before {
+  content: "> ";
+  color: var(--accent-color);
+  margin-right: 10px;
+}
+
+p {
+  color: var(--dim-color);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--bg-color); /* Purple text on Green button */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Timeline Grid */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.year {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.event {
+  color: var(--dim-color);
+}
+
+/* Social List */
+.social-list {
+  list-style: none;
+}
+
+.social-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
   }
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Blinking Cursor Animation */
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
