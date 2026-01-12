@@ -2,10 +2,10 @@
 My developer portfolio with a little linux twist to it. Built with **Next.js** and **TypeScript**.
 
 ## Tech stack
-**Framework:** Next.js 14+ (App router)
-**Styling:** Vanilla CSS
-**Theme:** Dark/Light mode via 'next-themes'
-**Icons:** React Icons
+**Framework:** Next.js 14+ (App router) <br>
+**Styling:** Vanilla CSS <br>
+**Theme:** Dark/Light mode via 'next-themes' <br>
+**Icons:** React Icons <br>
 
 ## Quick start
 ```bash
