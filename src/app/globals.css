@@ -214,3 +214,23 @@ p {
   background-color: var(--nav-hover);
   color: var(--accent-color);
 }
+
+.path-slider {
+  display: inline-grid;
+  grid-template-rows: 1fr; 
+  grid-template-columns: 0fr;
+  transition: grid-template-columns 0.4s ease-out;
+  vertical-align: bottom;
+}
+
+
+.path-slider:has(.path-content:not(:empty)) {
+  grid-template-columns: 1fr;
+}
+
+.path-content {
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--path-color);
+  font-weight: bold;
+}
