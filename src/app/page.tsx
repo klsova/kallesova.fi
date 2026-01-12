@@ -29,7 +29,7 @@ export default function Home() {
             I&apos;m a master's student currently working as a research assistant at the Turku Research Institute of Learning Analytics. 
             Currently studying about ML infrastructure and different AI models.
           </p>
-          <Link href="#" className="btn">
+          <Link href="/works" className="btn">
             My Works &gt;
           </Link>
         </section>
