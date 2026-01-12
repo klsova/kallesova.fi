@@ -32,18 +32,24 @@ export default function Navbar() {
             <span className="prompt-symbol">$</span>
             <span className="cursor">_</span> 
         </Link>
-      </div>
+    </div>
 
-      <div style={{ display: "flex", gap: "20px" }}>
+    <div style={{ display: "flex", gap: "10px", alignItems: 'center' }}>
         <Link href="/works" className="nav-btn">
-          <FaFolder style={{ fontSize: '0.8rem' }}/> Works
+            <FaFolder style={{ fontSize: '0.9rem' }}/> Works
         </Link>
 
         <button
-          className="nav-btn"
+          className="theme-toggle-btn"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          aria-label="Toggle Dark Mode"
         >
-          {mounted && theme === "light" ? <FaMoon /> : <FaSun />}
+          <FaSun 
+            className={`theme-icon ${mounted && theme === 'dark' ? 'icon-visible' : 'icon-hidden'}`} 
+          />
+          <FaMoon 
+            className={`theme-icon ${mounted && theme === 'light' ? 'icon-visible' : 'icon-hidden'}`} 
+          />
         </button>
       </div>
     </nav>

@@ -234,3 +234,37 @@ p {
   color: var(--path-color);
   font-weight: bold;
 }
+
+.theme-toggle-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.theme-toggle-btn:hover {
+  color: var(--accent-color);
+}
+
+/* Common style for both icons */
+.theme-icon {
+  position: absolute;
+  font-size: 1.2rem;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.icon-visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.icon-hidden {
+  opacity: 0;
+  transform: scale(0) rotate(90deg);
+}
