@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Ubuntu } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "../components/Navbar";
@@ -11,8 +11,8 @@ const ubuntuFont = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: "kallesova@mysite: ~/$",
-  description: "Portfolio",
+  title: "kallesova.fi",
+  description: "kallesova.fi",
 };
 
 export default function RootLayout({
