@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaTwitter, FaLinkedin, FaCode } from "react-icons/fa";
 import LocationCard from "../components/LocationCard";
+import RecentCommits from "../components/RecentCommits";
 
 export default function Home() {
   return (
@@ -77,13 +78,17 @@ export default function Home() {
         </section>
 
         <section>
-          <LocationCard 
-            city="Turku" 
-            country="FI"
-            timezone="Europe/Helsinki"
-            lat={60.45}
-            lng={22.27}
-          />
+          <h2>Dashboard</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
+            <LocationCard 
+              city="Turku" 
+              country="FI"
+              timezone="Europe/Helsinki"
+              lat={60.45}
+              lng={22.27}
+            />
+            <RecentCommits />
+          </div>
         </section>
 
         {/* Socials */}

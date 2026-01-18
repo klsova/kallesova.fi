@@ -348,3 +348,111 @@ p {
   font-variant-numeric: tabular-nums;
   letter-spacing: 1px;
 }
+
+.commits-card {
+  background-color: #16161e;
+  border: 1px solid #2b2b3b;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin-top: 2rem;
+}
+
+.commits-loading {
+  padding: 1rem;
+  color: #565f89;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Header */
+.commits-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7aa2f7;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-info {
+  margin-left: auto;
+  color: #565f89;
+  font-size: 0.9rem;
+}
+
+/* List Items */
+.commits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.commit-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.repo-name {
+  color: #7aa2f7;
+  font-weight: bold;
+}
+
+.commit-msg {
+  color: #a9b1d6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.commit-stats {
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+.additions { color: #9ece6a; }
+.deletions { color: #f7768e; }
+
+.commits-footer {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.github-link {
+  color: #e0af68;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+.language-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+}
+
+.hover-highlight:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
