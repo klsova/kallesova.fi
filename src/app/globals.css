@@ -427,7 +427,7 @@ p {
 }
 
 .github-link {
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 0.9rem;
   display: flex;
   align-items: center;
