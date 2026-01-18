@@ -181,25 +181,37 @@ export default async function RecentCommits() {
         <Link href={`https://github.com/${GITHUB_USERNAME}`} target="_blank" className="github-link">
           View on GitHub <FaExternalLinkAlt style={{ fontSize: '0.7rem' }} />
         </Link>
-        <div className="language-bar">
-          {languages.map((lang) => (
-            <div 
-                key={lang.name}
-                className="lang-segment"
-                style={{ 
-                    width: `${lang.percent}%`, 
-                    background: lang.color,
-                    height: '100%' 
-                }}
+        
+        <div className="language-bar" style={{ display: 'flex', width: '100%', height: '10px', marginTop: 'auto' }}>
+            {languages.map((lang, index) => {
+                const isFirst = index === 0;
+                const isLast = index === languages.length - 1;
+
+                return (
+                <div 
+                    key={lang.name}
+                    className="lang-segment"
+                    style={{ 
+                        flexGrow: lang.percent, 
+                        background: lang.color,
+                        height: '100%',
+                        borderTopLeftRadius: isFirst ? '6px' : '0',
+                        borderBottomLeftRadius: isFirst ? '6px' : '0',
+                        borderTopRightRadius: isLast ? '6px' : '0',
+                        borderBottomRightRadius: isLast ? '6px' : '0'
+                    }}
                 >
-                <div className="custom-tooltip">
-                    {lang.name} <span style={{ opacity: 0.6 }}>|</span> {lang.percent}%
+                    <div className="custom-tooltip">
+                        {lang.name} <span style={{ opacity: 0.6 }}>|</span> {lang.percent}%
+                    </div>
                 </div>
-            </div>
-          ))}
-          {languages.length === 0 && (
-             <div style={{ width: '100%', background: '#2b7489', height: '100%', opacity: 0.3 }} />
-          )}
+                );
+            })}
+            
+            {/* Fallback if empty */}
+            {languages.length === 0 && (
+                <div style={{ width: '100%', background: '#2b7489', height: '100%', borderRadius: '6px', opacity: 0.3 }} />
+            )}
         </div>
       </div>
     </div>
