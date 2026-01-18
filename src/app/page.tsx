@@ -78,8 +78,7 @@ export default function Home() {
         </section>
 
         <section>
-          <h2>Dashboard</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
+          <div className="dashboard-grid">
             <LocationCard 
               city="Turku" 
               country="FI"

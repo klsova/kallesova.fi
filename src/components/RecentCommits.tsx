@@ -185,16 +185,20 @@ export default async function RecentCommits() {
           {languages.map((lang) => (
             <div 
                 key={lang.name}
+                className="lang-segment"
                 style={{ 
                     width: `${lang.percent}%`, 
                     background: lang.color,
                     height: '100%' 
                 }}
-                title={`${lang.name}: ${lang.percent}%`} 
-            />
+                >
+                <div className="custom-tooltip">
+                    {lang.name} <span style={{ opacity: 0.6 }}>|</span> {lang.percent}%
+                </div>
+            </div>
           ))}
           {languages.length === 0 && (
-             <div style={{ width: '100%', background: '#2b7489', height: '100%', opacity: 0.3 }} title="No language data" />
+             <div style={{ width: '100%', background: '#2b7489', height: '100%', opacity: 0.3 }} />
           )}
         </div>
       </div>
