@@ -1,0 +1,42 @@
+"use client";
+
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+const icon = L.icon({
+  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+});
+
+interface MapProps {
+  lat: number;
+  lng: number;
+}
+
+export default function Map({ lat, lng }: MapProps) {
+  return (
+    <MapContainer 
+      center={[lat, lng]} 
+      zoom={13} 
+      zoomControl={false}
+      scrollWheelZoom={true} 
+      style={{ 
+          height: "100%", 
+          width: "100%", 
+          background: "#2d2b55"
+      }}
+    >
+      <TileLayer
+        attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+      />
+      
+      <Marker position={[lat, lng]} icon={icon}>
+        <Popup>Based here.</Popup>
+      </Marker>
+    </MapContainer>
+  );
+}

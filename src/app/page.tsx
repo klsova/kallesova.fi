@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaTwitter, FaLinkedin, FaCode } from "react-icons/fa";
+import LocationCard from "../components/LocationCard";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           <div>
             <h1>Kalle<br />Sova</h1>
             <div className="subtitle">Student / Developer</div>
+            <div className="text">Turku</div>
           </div>
           <Image
             src="/kalle1.png"
@@ -46,8 +48,6 @@ export default function Home() {
         <section>
           <h2>Bio</h2>
           <div className="timeline-grid">
-            <div className="year">2003</div>
-            <div className="event">Born in Helsinki, Finland</div>
 
             <div className="year">2022</div>
             <div className="event">
@@ -74,6 +74,16 @@ export default function Home() {
               Estimated MSc graduation at <Link href="https://www.utu.fi/en">University of Turku</Link>
             </div>
           </div>
+        </section>
+
+        <section>
+          <LocationCard 
+            city="Turku" 
+            country="FI"
+            timezone="Europe/Helsinki"
+            lat={60.45}
+            lng={22.27}
+          />
         </section>
 
         {/* Socials */}
