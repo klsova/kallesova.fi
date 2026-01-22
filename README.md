@@ -10,8 +10,8 @@ My developer portfolio with a little linux twist to it. Built with **Next.js** a
 ## Quick start
 ```bash
 # Clone & Install
-git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
-cd your-repo-name
+git clone [https://github.com/klsova/kallesova.fi.git](https://github.com/klsova/kallesova.fi.git)
+cd kallesova.fi
 npm install
 
 # Run Dev Server
