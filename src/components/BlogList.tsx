@@ -22,41 +22,41 @@ export default function BlogList({ posts }: BlogListProps) {
 
   return (
     <>
-      <div className="blog-sort">
-        <span className="blog-sort-label">sort:</span>
+      <div className="page-sort">
+        <span className="page-sort-label">sort:</span>
         <button
-          className={`blog-sort-btn ${sortBy === 'newest' ? 'active' : ''}`}
+          className={`page-sort-btn ${sortBy === 'newest' ? 'active' : ''}`}
           onClick={() => setSortBy('newest')}
         >
           newest
         </button>
         <button
-          className={`blog-sort-btn ${sortBy === 'oldest' ? 'active' : ''}`}
+          className={`page-sort-btn ${sortBy === 'oldest' ? 'active' : ''}`}
           onClick={() => setSortBy('oldest')}
         >
           oldest
         </button>
       </div>
 
-      <div className="blog-list">
+      <div className="page-list">
         {sortedPosts.length === 0 ? (
-          <p className="blog-empty">No posts found.</p>
+          <p className="page-empty">No posts found.</p>
         ) : (
           sortedPosts.map((post) => (
-            <article key={post.slug} className="blog-item">
-              <Link href={`/blog/${post.slug}`} className="blog-item-link">
-                <div className="blog-item-header">
-                  <span className="blog-item-perms">-rw-r--r--</span>
-                  <span className="blog-item-date">{post.date}</span>
-                  <span className="blog-item-title">{post.slug}.md</span>
+            <article key={post.slug} className="page-item">
+              <Link href={`/blog/${post.slug}`} className="page-item-link">
+                <div className="page-item-header">
+                  <span className="page-item-perms">-rw-r--r--</span>
+                  <span className="page-item-date">{post.date}</span>
+                  <span className="page-item-title">{post.slug}.md</span>
                 </div>
-                <div className="blog-item-meta">
-                  <h2 className="blog-item-name">{post.title}</h2>
-                  <p className="blog-item-desc">{post.description}</p>
+                <div className="page-item-meta">
+                  <h2 className="page-item-name">{post.title}</h2>
+                  <p className="page-item-desc">{post.description}</p>
                   {post.tags.length > 0 && (
-                    <div className="blog-item-tags">
+                    <div className="page-item-tags">
                       {post.tags.map((tag) => (
-                        <span key={tag} className="blog-tag">
+                        <span key={tag} className="page-tag">
                           {tag}
                         </span>
                       ))}

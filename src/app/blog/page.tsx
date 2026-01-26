@@ -12,8 +12,8 @@ export default function BlogPage() {
 
   return (
     <main className="container">
-      <div className="blog-header">
-        <span className="blog-command">ls -la ./blog</span>
+      <div className="page-header">
+        <span className="page-command">ls -la ./blog</span>
       </div>
 
       <BlogList posts={posts} />

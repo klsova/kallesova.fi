@@ -39,11 +39,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <main className="container">
-      <div className="blog-header">
-        <Link href="/blog" className="blog-back-btn" aria-label="Back to blog">
+      <div className="page-header">
+        <Link href="/blog" className="page-back-btn" aria-label="Back to blog">
           <FaArrowLeft />
         </Link>
-        <span className="blog-command">cat ./blog/{slug}.md</span>
+        <span className="page-command">cat ./blog/{slug}.md</span>
       </div>
 
       <article className="blog-post">
@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: Props) {
             {post.tags.length > 0 && (
               <div className="blog-post-tags">
                 {post.tags.map((tag) => (
-                  <span key={tag} className="blog-tag">
+                  <span key={tag} className="page-tag">
                     {tag}
                   </span>
                 ))}
