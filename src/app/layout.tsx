@@ -13,6 +13,9 @@ const ubuntuFont = Ubuntu({
 export const metadata: Metadata = {
   title: "kallesova.fi",
   description: "kallesova.fi",
+  icons: {
+    icon: "/letter-k.png",
+  },
 };
 
 export default function RootLayout({
