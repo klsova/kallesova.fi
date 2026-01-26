@@ -14,17 +14,18 @@ const projects = [
     link: "https://github.com/klsova/hybridrecommend/"
   },
   {
+    title: "Poro",
+    tech: ["TypeScript", "Next.js", "Supabase"],
+    desc: "A gamified pomodoro and kanban web application",
+    link: "https://github.com/klsova/poro/"
+  },
+    {
     title: "Rust-editor",
     tech: ["Rust", "Crossterm", "Unicode-segmentation"],
     desc: "A vim-like text editor made in Rust.",
     link: "https://github.com/klsova/rust-editor/"
   },
-  {
-    title: "CivSwipe",
-    tech: ["JavaScript", "React", "Express"],
-    desc: "A solution to Sitra's challenge in Junction 2024 hackathon, making citizen-initatives more accessible to the average person.",
-    link: "https://github.com/klsova/civswipe/"
-  }
+
 ];
 
 export default function Works() {
