@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaSun, FaMoon, FaFolder } from "react-icons/fa";
+import { FaSun, FaMoon, FaFolder, FaBook } from "react-icons/fa";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -37,6 +37,9 @@ export default function Navbar() {
     <div style={{ display: "flex", gap: "10px", alignItems: 'center' }}>
         <Link href="/works" className="nav-btn">
             <FaFolder style={{ fontSize: '0.9rem' }}/> Works
+        </Link>
+        <Link href="/blog" className="nav-btn">
+            <FaBook style={{ fontSize: '0.9rem' }}/> Blog
         </Link>
 
         <button
