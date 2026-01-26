@@ -46,8 +46,28 @@ export default function Home() {
         <section>
           <h2>I Like</h2>
           <p>
-            Python, Rust, Linux, Vim, AI/ML
+            Python, Rust, C, TypeScript, Linux, Vim
           </p>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+            <h3>Primary Languages:</h3>
+              <p>
+                Python, TypeScript, Rust, SQL, Java
+              </p>
+            <h3>Web Technologies:</h3>
+              <p>
+                HTML5, CSS3, React, Next.js, Tailwind CSS
+              </p>
+            <h3>Tools:</h3>
+              <p>
+                Git, VSCode, Neovim, Claude Code, Docker, Linux
+              </p>
+            <h3>Familiar with:</h3>
+              <p>
+                Azure, Ubuntu LTS, Supabase
+              </p>
         </section>
 
         {/* Bio / Timeline */}
