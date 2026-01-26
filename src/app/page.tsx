@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin, FaCode } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaCode, FaTelegram } from "react-icons/fa";
 import LocationCard from "../components/LocationCard";
 import RecentCommits from "../components/RecentCommits";
 
@@ -14,6 +14,11 @@ export default function Home() {
             <h1>Kalle<br />Sova</h1>
             <div className="subtitle">Student / Developer</div>
             <div className="text">Turku</div>
+            <div className="hero-socials">
+              <Link href="https://github.com/klsova" target="_blank" aria-label="GitHub"><FaGithub /></Link>
+              <Link href="https://www.linkedin.com/in/kalle-sova-5b4616292/" target="_blank" aria-label="LinkedIn"><FaLinkedin /></Link>
+              <Link href="https://t.me/kalleleonard" target="_blank" aria-label="Telegram"><FaTelegram /></Link>
+            </div>
           </div>
           <Image
             src="/kalle1.png"

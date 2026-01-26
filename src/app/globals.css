@@ -88,6 +88,23 @@ h1 {
   margin-top: 0.5rem;
 }
 
+.hero-socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.hero-socials a {
+  color: var(--accent-color);
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+
+.hero-socials a:hover {
+  color: var(--dim-color);
+  text-decoration: none;
+}
+
 .profile-pic {
   border-radius: 50%;
   border: 2px solid var(--accent-color); /* Green border around photo */
