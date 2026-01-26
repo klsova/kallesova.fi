@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin, FaCode, FaTelegram } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaCode, FaTelegram, FaJava, FaDatabase, FaTerminal, FaCloud } from "react-icons/fa";
+import {
+  SiPython, SiTypescript, SiRust, SiHtml5, SiCss3, SiReact,
+  SiNextdotjs, SiTailwindcss, SiGit,
+  SiNeovim, SiDocker, SiLinux, SiUbuntu, SiSupabase
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import LocationCard from "../components/LocationCard";
 import RecentCommits from "../components/RecentCommits";
 
@@ -52,22 +58,41 @@ export default function Home() {
 
         <section>
           <h2>Skills</h2>
-            <h3>Primary Languages:</h3>
-              <p>
-                Python, TypeScript, Rust, SQL, Java
-              </p>
-            <h3>Web Technologies:</h3>
-              <p>
-                HTML5, CSS3, React, Next.js, Tailwind CSS
-              </p>
-            <h3>Tools:</h3>
-              <p>
-                Git, VSCode, Neovim, Claude Code, Docker, Linux
-              </p>
-            <h3>Familiar with:</h3>
-              <p>
-                Azure, Ubuntu LTS, Supabase
-              </p>
+
+          <h3 className="skill-category">Languages</h3>
+          <div className="skill-grid">
+            <div className="skill-chip"><SiPython /> Python</div>
+            <div className="skill-chip"><SiTypescript /> TypeScript</div>
+            <div className="skill-chip"><SiRust /> Rust</div>
+            <div className="skill-chip"><FaDatabase /> SQL</div>
+            <div className="skill-chip"><FaJava /> Java</div>
+          </div>
+
+          <h3 className="skill-category">Web</h3>
+          <div className="skill-grid">
+            <div className="skill-chip"><SiHtml5 /> HTML5</div>
+            <div className="skill-chip"><SiCss3 /> CSS3</div>
+            <div className="skill-chip"><SiReact /> React</div>
+            <div className="skill-chip"><SiNextdotjs /> Next.js</div>
+            <div className="skill-chip"><SiTailwindcss /> Tailwind CSS</div>
+          </div>
+
+          <h3 className="skill-category">Tools</h3>
+          <div className="skill-grid">
+            <div className="skill-chip"><SiGit /> Git</div>
+            <div className="skill-chip"><VscVscode /> VSCode</div>
+            <div className="skill-chip"><SiNeovim /> Neovim</div>
+            <div className="skill-chip"><FaTerminal /> Claude Code</div>
+            <div className="skill-chip"><SiDocker /> Docker</div>
+            <div className="skill-chip"><SiLinux /> Linux</div>
+          </div>
+
+          <h3 className="skill-category">Familiar with</h3>
+          <div className="skill-grid">
+            <div className="skill-chip"><FaCloud /> Azure</div>
+            <div className="skill-chip"><SiUbuntu /> Ubuntu LTS</div>
+            <div className="skill-chip"><SiSupabase /> Supabase</div>
+          </div>
         </section>
 
         {/* Bio / Timeline */}
