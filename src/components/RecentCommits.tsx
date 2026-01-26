@@ -123,7 +123,7 @@ export default async function RecentCommits() {
   if (!cleanToken) {
      return (
         <div className="commits-card">
-            <div style={{ padding: '1rem', color: '#f7768e', textAlign: 'center' }}>
+            <div style={{ padding: '1rem', color: '#e07060', textAlign: 'center' }}>
                 <FaExclamationTriangle /> Missing GITHUB_TOKEN
             </div>
         </div>
@@ -154,7 +154,7 @@ export default async function RecentCommits() {
 
       <div className="commits-list">
         {(!commits || commits.length === 0) && (
-             <div style={{ padding: '1rem', color: '#565f89', textAlign: 'center', fontSize: '0.9rem' }}>
+             <div style={{ padding: '1rem', color: '#706058', textAlign: 'center', fontSize: '0.9rem' }}>
                 No recent commits found.
             </div>
         )}
@@ -210,7 +210,7 @@ export default async function RecentCommits() {
             
             {/* Fallback if empty */}
             {languages.length === 0 && (
-                <div style={{ width: '100%', background: '#2b7489', height: '100%', borderRadius: '6px', opacity: 0.3 }} />
+                <div style={{ width: '100%', background: '#b07848', height: '100%', borderRadius: '6px', opacity: 0.3 }} />
             )}
         </div>
       </div>

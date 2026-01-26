@@ -18,7 +18,7 @@ export default function Map({ lat, lng }: MapProps) {
       style={{ 
           height: "100%", 
           width: "100%", 
-          background: "#2d2b55"
+          background: "#1a1714"
       }}
     >
       <TileLayer
