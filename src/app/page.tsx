@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin, FaCode, FaTelegram, FaJava, FaDatabase, FaTerminal, FaCloud } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaCode, FaTelegram, FaJava, FaDatabase, FaTerminal, FaCloud } from "react-icons/fa";
 import {
   SiPython, SiTypescript, SiRust, SiHtml5, SiCss3, SiReact,
   SiNextdotjs, SiTailwindcss, SiGit,
@@ -52,7 +52,7 @@ export default function Home() {
         <section>
           <h2>I Like</h2>
           <p>
-            Python, Rust, C, TypeScript, Linux, Vim
+            Python, Rust, C, TypeScript, Linux, NeoVim
           </p>
         </section>
 
