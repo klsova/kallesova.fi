@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import WindowFrame from "../../components/WindowFrame";
 
 export const metadata: Metadata = {
   title: "Works | kallesova",
@@ -31,35 +32,37 @@ const projects = [
 export default function Works() {
   return (
     <main className="container">
-      <div className="page-header">
-        <span className="page-command">ls -la ./works</span>
-      </div>
+      <WindowFrame title="works/">
+        <div className="page-header">
+          <span className="page-command">ls -la ./works</span>
+        </div>
 
-      <div className="page-list">
-        {projects.map((project, index) => (
-          <article key={index} className="page-item">
-            <Link href={project.link} target="_blank" className="page-item-link">
-              <div className="page-item-header">
-                <span className="page-item-perms">drwxr-xr-x</span>
-                <span className="page-item-title">{project.title}/</span>
-              </div>
-              <div className="page-item-meta">
-                <h2 className="page-item-name">{project.title}</h2>
-                <p className="page-item-desc">{project.desc}</p>
-                {project.tech.length > 0 && (
-                  <div className="page-item-tags">
-                    {project.tech.map((t) => (
-                      <span key={t} className="page-tag">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </Link>
-          </article>
-        ))}
-      </div>
+        <div className="page-list">
+          {projects.map((project, index) => (
+            <article key={index} className="page-item">
+              <Link href={project.link} target="_blank" className="page-item-link">
+                <div className="page-item-header">
+                  <span className="page-item-perms">drwxr-xr-x</span>
+                  <span className="page-item-title">{project.title}/</span>
+                </div>
+                <div className="page-item-meta">
+                  <h2 className="page-item-name">{project.title}</h2>
+                  <p className="page-item-desc">{project.desc}</p>
+                  {project.tech.length > 0 && (
+                    <div className="page-item-tags">
+                      {project.tech.map((t) => (
+                        <span key={t} className="page-tag">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </Link>
+            </article>
+          ))}
+        </div>
+      </WindowFrame>
     </main>
   );
 }
