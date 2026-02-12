@@ -1,6 +1,7 @@
 import { getAllPostsMeta } from '@/lib/posts';
 import BlogList from '@/components/BlogList';
 import type { Metadata } from 'next';
+import WindowFrame from '../../components/WindowFrame';
 
 export const metadata: Metadata = {
   title: 'Blog | kallesova',
@@ -12,11 +13,13 @@ export default function BlogPage() {
 
   return (
     <main className="container">
-      <div className="page-header">
-        <span className="page-command">ls -la ./blog</span>
-      </div>
+      <WindowFrame title="blog/">
+        <div className="page-header">
+          <span className="page-command">ls -la ./blog</span>
+        </div>
 
-      <BlogList posts={posts} />
+        <BlogList posts={posts} />
+      </WindowFrame>
     </main>
   );
 }

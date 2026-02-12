@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { FaSun, FaMoon, FaFolder, FaBook } from "react-icons/fa";
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
@@ -16,21 +16,22 @@ export default function Navbar() {
   }, []);
 
   const pathSuffix = pathname === "/" ? "" : pathname;
+  const isDark = mounted ? resolvedTheme === "dark" : true;
 
   return (
-    <nav>
+    <nav className="navbar-taskbar">
       <div className="prompt">
         <Link href="/" style={{ textDecoration: 'none' }}>
             <span className="prompt-user">kallesova@mysite</span>
             <span className="prompt-symbol">:</span>
             <span className="prompt-path">~</span>
-            
+
             <span className="path-slider">
                 <span className="path-content">{pathSuffix}</span>
             </span>
-            
+
             <span className="prompt-symbol">$</span>
-            <span className="cursor">_</span> 
+            <span className="cursor">_</span>
         </Link>
     </div>
 
@@ -44,14 +45,14 @@ export default function Navbar() {
 
         <button
           className="theme-toggle-btn"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          onClick={() => setTheme(isDark ? "light" : "dark")}
           aria-label="Toggle Dark Mode"
         >
-          <FaSun 
-            className={`theme-icon ${mounted && theme === 'dark' ? 'icon-visible' : 'icon-hidden'}`} 
+          <FaSun
+            className={`theme-icon ${isDark ? 'icon-visible' : 'icon-hidden'}`}
           />
-          <FaMoon 
-            className={`theme-icon ${mounted && theme === 'light' ? 'icon-visible' : 'icon-hidden'}`} 
+          <FaMoon
+            className={`theme-icon ${!isDark ? 'icon-visible' : 'icon-hidden'}`}
           />
         </button>
       </div>

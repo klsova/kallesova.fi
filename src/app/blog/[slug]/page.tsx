@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getPostBySlug, getPostSlugs } from '@/lib/posts';
 import type { Metadata } from 'next';
 import { FaArrowLeft } from 'react-icons/fa';
+import WindowFrame from '../../../components/WindowFrame';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -39,41 +40,43 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <main className="container">
-      <div className="page-header">
-        <Link href="/blog" className="page-back-btn" aria-label="Back to blog">
-          <FaArrowLeft />
-        </Link>
-        <span className="page-command">cat ./blog/{slug}.md</span>
-      </div>
-
-      <article className="blog-post">
-        <header className="blog-post-header">
-          <h1 className="blog-post-title">{post.title}</h1>
-          <div className="blog-post-meta">
-            <time className="blog-post-date">{post.date}</time>
-            {post.tags.length > 0 && (
-              <div className="blog-post-tags">
-                {post.tags.map((tag) => (
-                  <span key={tag} className="page-tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
-        </header>
-
-        <div
-          className="blog-content"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
-
-        <footer className="blog-post-footer">
-          <Link href="/blog" className="blog-back-link">
-            ← cd ../blog
+      <WindowFrame title={`${slug}.md`}>
+        <div className="page-header">
+          <Link href="/blog" className="page-back-btn" aria-label="Back to blog">
+            <FaArrowLeft />
           </Link>
-        </footer>
-      </article>
+          <span className="page-command">cat ./blog/{slug}.md</span>
+        </div>
+
+        <article className="blog-post">
+          <header className="blog-post-header">
+            <h1 className="blog-post-title">{post.title}</h1>
+            <div className="blog-post-meta">
+              <time className="blog-post-date">{post.date}</time>
+              {post.tags.length > 0 && (
+                <div className="blog-post-tags">
+                  {post.tags.map((tag) => (
+                    <span key={tag} className="page-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </header>
+
+          <div
+            className="blog-content"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+
+          <footer className="blog-post-footer">
+            <Link href="/blog" className="blog-back-link">
+              ← cd ../blog
+            </Link>
+          </footer>
+        </article>
+      </WindowFrame>
     </main>
   );
 }

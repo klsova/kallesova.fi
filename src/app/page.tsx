@@ -9,54 +9,58 @@ import {
 import { VscVscode } from "react-icons/vsc";
 import LocationCard from "../components/LocationCard";
 import RecentCommits from "../components/RecentCommits";
+import WindowFrame from "../components/WindowFrame";
+import PixelDecorations from "../components/PixelDecorations";
 
 export default function Home() {
   return (
     <main>
       <div className="container">
         {/* Header / Hero */}
-        <header>
-          <div>
-            <h1>Kalle<br />Sova</h1>
-            <div className="subtitle">Student / Developer</div>
-            <div className="text">Turku</div>
-            <div className="hero-socials">
-              <Link href="https://github.com/klsova" target="_blank" aria-label="GitHub"><FaGithub /></Link>
-              <Link href="https://www.linkedin.com/in/kalle-sova-5b4616292/" target="_blank" aria-label="LinkedIn"><FaLinkedin /></Link>
-              <Link href="https://t.me/kalleleonard" target="_blank" aria-label="Telegram"><FaTelegram /></Link>
+        <WindowFrame title="kalle_sova.exe">
+          <header>
+            <div>
+              <h1>Kalle<br />Sova</h1>
+              <div className="subtitle">Student / Developer</div>
+              <div className="text">Turku</div>
+              <div className="hero-socials">
+                <Link href="https://github.com/klsova" target="_blank" aria-label="GitHub"><FaGithub /></Link>
+                <Link href="https://www.linkedin.com/in/kalle-sova-5b4616292/" target="_blank" aria-label="LinkedIn"><FaLinkedin /></Link>
+                <Link href="https://t.me/kalleleonard" target="_blank" aria-label="Telegram"><FaTelegram /></Link>
+              </div>
             </div>
-          </div>
-          <Image
-            src="/kalle1.png"
-            alt="Profile Picture"
-            width={120}
-            height={120}
-            className="profile-pic"
-            priority
-          />
-        </header>
+            <Image
+              src="/kalle1.png"
+              alt="Profile Picture"
+              width={120}
+              height={120}
+              className="profile-pic"
+              priority
+            />
+          </header>
+        </WindowFrame>
 
         {/* About Me */}
-        <section>
+        <WindowFrame title="about.txt">
           <h2>About Me</h2>
           <p>
-            I&apos;m a master's student currently working as a research assistant at the Turku Research Institute of Learning Analytics. 
-            Currently studying about ML infrastructure and different AI models.
+            I&apos;m a master's student currently working as a research assistant at the Turku Research Institute of Learning Analytics.
+            Currently studying low-level programming and machine learning methods.
           </p>
           <Link href="/works" className="btn">
             My Works &gt;
           </Link>
-        </section>
+        </WindowFrame>
 
         {/* I Like */}
-        <section>
+        <WindowFrame title="favorites.conf">
           <h2>I Like</h2>
           <p>
             Python, Rust, C, TypeScript, Linux, NeoVim
           </p>
-        </section>
+        </WindowFrame>
 
-        <section>
+        <WindowFrame title="skills.sys">
           <h2>Skills</h2>
 
           <h3 className="skill-category">Languages</h3>
@@ -93,10 +97,10 @@ export default function Home() {
             <div className="skill-chip"><SiUbuntu /> Ubuntu LTS</div>
             <div className="skill-chip"><SiSupabase /> Supabase</div>
           </div>
-        </section>
+        </WindowFrame>
 
         {/* Bio / Timeline */}
-        <section>
+        <WindowFrame title="bio.log">
           <h2>Bio</h2>
           <div className="timeline-grid">
 
@@ -125,12 +129,12 @@ export default function Home() {
               Estimated MSc graduation at <Link href="https://www.utu.fi/en">University of Turku</Link>
             </div>
           </div>
-        </section>
+        </WindowFrame>
 
-        <section>
+        <WindowFrame title="dashboard.app">
           <div className="dashboard-grid">
-            <LocationCard 
-              city="Turku" 
+            <LocationCard
+              city="Turku"
               country="FI"
               timezone="Europe/Helsinki"
               lat={60.45}
@@ -138,10 +142,10 @@ export default function Home() {
             />
             <RecentCommits />
           </div>
-        </section>
+        </WindowFrame>
 
         {/* Socials */}
-        <section>
+        <WindowFrame title="socials.lnk">
           <h2>Socials</h2>
           <ul className="social-list">
             <li>
@@ -157,14 +161,16 @@ export default function Home() {
               <Link href="https://leetcode.com/u/klsova/">https://leetcode.com/u/klsova/</Link>
             </li>
           </ul>
-        </section>
+        </WindowFrame>
 
         {/* Footer */}
         <footer style={{ textAlign: "center", marginTop: "4rem", color: "var(--dim-color)" }}>
-          <FaGithub style={{ marginRight: "5px" }} /> 
+          <FaGithub style={{ marginRight: "5px" }} />
           <Link href="https://github.com/klsova/kallesova.fi" style={{ color: "var(--text-color)" }}>Source</Link>
         </footer>
       </div>
+
+      <PixelDecorations />
     </main>
   );
 }
