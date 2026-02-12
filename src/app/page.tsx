@@ -10,6 +10,7 @@ import { VscVscode } from "react-icons/vsc";
 import LocationCard from "../components/LocationCard";
 import RecentCommits from "../components/RecentCommits";
 import WindowFrame from "../components/WindowFrame";
+import RecentBlogPosts from "../components/RecentBlogPosts";
 import PixelDecorations from "../components/PixelDecorations";
 
 export default function Home() {
@@ -129,6 +130,10 @@ export default function Home() {
               Estimated MSc graduation at <Link href="https://www.utu.fi/en">University of Turku</Link>
             </div>
           </div>
+        </WindowFrame>
+
+        <WindowFrame title="blog.recent">
+          <RecentBlogPosts limit={3} />
         </WindowFrame>
 
         <WindowFrame title="dashboard.app">
