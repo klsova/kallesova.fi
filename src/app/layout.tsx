@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Ubuntu } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 
-// Configure the Linux-style font
-const ubuntuFont = Ubuntu({ 
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"], 
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -25,10 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={ubuntuFont.className}>
+      <body className={inter.variable}>
         <Providers>
-          <Navbar /> 
-          {children}
+          <div className="app-shell">
+            <Sidebar />
+            <div className="content-area">{children}</div>
+          </div>
         </Providers>
       </body>
     </html>
