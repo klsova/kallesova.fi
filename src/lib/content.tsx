@@ -20,14 +20,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "hybrid recommend",
-    tagline: "movie recommendations from a hybrid of content-based and collaborative models.",
+    title: "Guolda",
+    tagline: "Guilda is a multi-tenant workspace for student associations, clubs, and nonprofits. This first vertical slice lets a person sign in, create an organization, become its owner, and manage its events and tasks.",
     points: [
-      "Combines a content-based model with collaborative filtering into one hybrid recommender.",
-      "Exploration, feature engineering and evaluation done in Jupyter notebooks.",
+      "Multi-tenant architecture with role-based access control.",
+      "Event and task management with a clean, responsive UI.",
+      "Auth and persistence on Supabase.",
     ],
-    tech: ["Python", "Jupyter Notebook", "Pandas", "NumPy", "Scikit-learn"],
-    github: "https://github.com/klsova/hybridrecommend/",
+    tech: ["C#", "TypeScript", "PostgreSQL"],
+    github: "https://github.com/klsova/guilda",
   },
   {
     title: "poro",
@@ -68,10 +69,10 @@ export interface Track {
 
 export const tracks: Track[] = [
   {
-    title: "blue birds",
+    title: "emotional",
     year: "2026",
-    desc: "a hopeful sounding house track.",
-    link: "https://soundcloud.com/dj_keskikalja/kalle-haus-blue-birds",
+    desc: "lo-fi house track.",
+    link: "https://soundcloud.com/dj_keskikalja/emotional?si=76b177861c4d49e993c9c62558b9c831&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
 ];
 
@@ -138,8 +139,10 @@ export const timeline: { year: string; event: ReactNode }[] = [
 ];
 
 export const skills: { label: string; items: string[] }[] = [
-  { label: "languages", items: ["Python", "TypeScript", "Rust", "SQL", "Java"] },
-  { label: "web", items: ["React", "Next.js", "Tailwind CSS", "HTML", "CSS"] },
-  { label: "tools", items: ["Git", "Neovim", "VS Code", "Claude Code", "Docker", "Linux"] },
-  { label: "familiar with", items: ["Azure", "Ubuntu LTS", "Supabase"] },
+  { label: "languages", items: ["TypeScript", "Python",  "Rust", "C#", "Java", "SQL", "JavaScript", "R"] },
+  { label: "frontend", items: ["React", "Next.js", "Vite", "Tailwind CSS", "TanStack Query", "React Hook Form + Zod", "Material UI"] },
+  { label: "backend", items: ["GraphQL", "Apollo Server", "Node.js + Express", "ASP.NET Core + Entity Framework Core", "Quarkus", "REST", "OpenAPI / Swagger"] },
+  { label: "databases", items: ["Neo4j", "PostreSQL", "MongoDB + Mongoose, Supabase"] },
+  { label: "tools", items: ["Git", "Linux Server Administration", "Claude Code", "Docker", "Keycloak / JWT auth", "Vercel"] },
+  { label: "data & ml", items: ["pandas, NumPy, scikit-learn, Jupyter", "Streamlit", "Stan"] }
 ];

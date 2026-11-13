@@ -113,14 +113,14 @@ export default function Home() {
         <Image src="/kalle1.png" alt="Kalle Sova" width={88} height={88} className="avatar" priority />
         <div className="intro-text">
           <h1>hey, i&apos;m kalle!</h1>
-          <p className="role">developer, photographer &amp; occasional musician · turku / helsinki</p>
+          <p className="role">developer, photographer &amp; occasional musician · helsinki / turku</p>
         </div>
         <ThemeToggle />
       </header>
 
       <p className="bio">
         master&apos;s student and research assistant at the University of Turku, now also studying at Aalto. outside
-        of work i shoot film, write, and make music.
+        of work i shoot film and make music.
       </p>
 
       <nav className="socials" aria-label="Social links">
