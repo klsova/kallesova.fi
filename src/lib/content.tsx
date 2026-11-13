@@ -3,6 +3,9 @@ import type { ReactNode } from "react";
 
 export const GITHUB_USERNAME = "klsova";
 
+/** Lives in public/cv.pdf; replace that file to update the CV. */
+export const CV_URL = "/cv.pdf";
+
 export const socials = [
   { label: "GitHub", href: "https://github.com/klsova" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/kalle-sova-5b4616292/" },
