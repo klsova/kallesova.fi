@@ -23,7 +23,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Guolda",
+    title: "Guilda",
     tagline: "Guilda is a multi-tenant workspace for student associations, clubs, and nonprofits. This first vertical slice lets a person sign in, create an organization, become its owner, and manage its events and tasks.",
     points: [
       "Multi-tenant architecture with role-based access control.",
