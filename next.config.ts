@@ -6,7 +6,7 @@ const oldRoutes: Record<string, string> = {
   "/works": "/#works",
   "/photography": "/#photography",
   "/music": "/#music",
-  "/cv": "/#experience",
+  "/cv": "/cv.pdf",
 };
 
 const nextConfig: NextConfig = {

@@ -5,7 +5,7 @@ import { FiChevronDown, FiCode, FiMusic } from "react-icons/fi";
 import Contributions from "@/components/Contributions";
 import Tabs from "@/components/Tabs";
 import ThemeToggle from "@/components/ThemeToggle";
-import { projects, skills, socials, timeline, tracks } from "@/lib/content";
+import { CV_URL, projects, skills, socials, timeline, tracks } from "@/lib/content";
 import { photos } from "@/lib/photos";
 
 const socialIcons = { GitHub: FaGithub, LinkedIn: FaLinkedin, Telegram: FaTelegram };
@@ -102,6 +102,11 @@ function Experience() {
           </Fragment>
         ))}
       </dl>
+      <p className="cv-download">
+        <a href={CV_URL} target="_blank" rel="noopener">
+          download full cv (pdf)
+        </a>
+      </p>
     </>
   );
 }
@@ -132,6 +137,9 @@ export default function Home() {
             </a>
           );
         })}
+        <a href={CV_URL} className="socials-text" target="_blank" rel="noopener" title="CV (PDF)">
+          CV
+        </a>
       </nav>
 
       <Contributions />

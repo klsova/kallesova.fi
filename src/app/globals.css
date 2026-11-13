@@ -151,6 +151,18 @@ a:hover {
   color: var(--fg);
 }
 
+.socials .socials-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  align-items: center;
+}
+
+.cv-download {
+  margin-top: 1.75rem;
+  font-size: 0.88rem;
+}
+
 /* Contribution graph */
 .graph {
   display: grid;
