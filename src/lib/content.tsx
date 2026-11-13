@@ -28,7 +28,7 @@ export const projects: Project[] = [
     points: [
       "Multi-tenant architecture with role-based access control.",
       "Event and task management with a clean, responsive UI.",
-      "Auth and persistence on Supabase.",
+      "Auth with Keycloak, data in PostgreSQL via Entity Framework Core.",
     ],
     tech: ["C#", "TypeScript", "PostgreSQL"],
     github: "https://github.com/klsova/guilda",
@@ -145,7 +145,7 @@ export const skills: { label: string; items: string[] }[] = [
   { label: "languages", items: ["TypeScript", "Python",  "Rust", "C#", "Java", "SQL", "JavaScript", "R"] },
   { label: "frontend", items: ["React", "Next.js", "Vite", "Tailwind CSS", "TanStack Query", "React Hook Form + Zod", "Material UI"] },
   { label: "backend", items: ["GraphQL", "Apollo Server", "Node.js + Express", "ASP.NET Core + Entity Framework Core", "Quarkus", "REST", "OpenAPI / Swagger"] },
-  { label: "databases", items: ["Neo4j", "PostreSQL", "MongoDB + Mongoose, Supabase"] },
+  { label: "databases", items: ["Neo4j", "PostgreSQL", "MongoDB + Mongoose, Supabase"] },
   { label: "tools", items: ["Git", "Linux Server Administration", "Claude Code", "Docker", "Keycloak / JWT auth", "Vercel"] },
   { label: "data & ml", items: ["pandas, NumPy, scikit-learn, Jupyter", "Streamlit", "Stan"] }
 ];
